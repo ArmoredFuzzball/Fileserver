@@ -32,7 +32,7 @@ window.addEventListener('load', () => {
     const form = document.getElementById('uploadForm');
     form.addEventListener('submit', (event) => {
         event.preventDefault();
-        if (document.getElementById('file').files[0].size > 5e+9) return alert('File is too big!');
+        if (document.getElementById('file').files[0].size > 15e+9) return alert('File is too big!');
         const startTime = Date.now();
         const request = new XMLHttpRequest();
         request.upload.addEventListener('progress', (event) => {
