@@ -3,5 +3,10 @@
     "compression": "^1.8.1",
     "express": "^5.2.1",
     "express-fileupload": "^1.5.2"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "@types/express-fileupload": "^1.5.1"
   }
 }
