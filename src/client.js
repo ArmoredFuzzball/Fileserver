@@ -100,15 +100,18 @@ window.addEventListener('load', () => {
   });
 
   // Browse button click
-  browseButton.addEventListener('click', () => {
+  browseButton.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent triggering dropZone click
     fileInput.click();
   });
 
   // Drag and drop handlers
   dropZone.addEventListener('click', (e) => {
-    if (e.target === dropZone || e.target.closest('.upload-icon') || e.target.closest('div') === dropZone.querySelector('div')) {
-      fileInput.click();
+    // Don't trigger if clicking on the browse button (already has its own handler)
+    if (e.target === browseButton || browseButton.contains(e.target)) {
+      return;
     }
+    fileInput.click();
   });
 
   dropZone.addEventListener('dragover', (e) => {
