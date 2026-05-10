@@ -2,37 +2,35 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Axiom CDN</title>
-    <link rel="icon" href="./favicon.ico">
-    <script src="client.js"></script>
-    <style>
-        html, body {
-            background-color: #1e1e1e;
-            color: #fff;
-            font-size: 18px;
-        }
-        a {
-            color: #00b4d8;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Axiom CDN</title>
+  <link rel="icon" href="favicon.ico">
+  <script src="client.js"></script>
+  <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <form ref='uploadForm' id='uploadForm' action='./' method='post' encType="multipart/form-data">
-        <input type="file" name="file" id="file"/>
-        <input type='submit' value='Upload!' />
-    </form>
+  <h1>Axiom CDN</h1>
 
-    <div id="data">
-        <div id="progressNumber">ready...</div>
-        <div id="timeRemaining">~ seconds</div>
-        <div id="uploadSpeed">~ mbit/sec</div>
+  <form ref='uploadForm' id='uploadForm' action='./' method='post' encType="multipart/form-data">
+    <div id="dropZone">
+      <div class="upload-icon">📁</div>
+      <div>Drag and drop your file here</div>
+      <div style="margin: 10px 0;">or</div>
+      <button type="button" class="browse-button" id="browseButton">Browse Files</button>
+      <input type="file" name="file" id="file" />
     </div>
-    <br>File list:
-    <div id="files"></div><br>
+  </form>
+
+  <div id="progressLine">✨ Ready to upload</div>
+
+  <h3>File list:</h3>
+  <div id="files"></div>
+
+  <footer>
     Created by ArmoredFuzzball 🦊
-    <br><z style="color: red">Size limit: 15GB</z>
+    <br><span class="size-limit">Size limit: 50GB</span>
+  </footer>
 </body>
 
 </html>

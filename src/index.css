@@ -1,0 +1,153 @@
+html,
+body {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  margin: 0;
+  padding: 15px;
+}
+
+a {
+  color: #00b4d8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#uploadForm {
+  margin: 0 0 0px 0;
+}
+
+#dropZone {
+  border: 2px dashed #555;
+  border-radius: 8px;
+  padding: 25px 20px;
+  text-align: center;
+  background-color: #2a2a2a;
+  margin: 0;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+#dropZone.dragover {
+  border-color: #00b4d8;
+  background-color: #333;
+  transform: scale(1.01);
+}
+
+#dropZone:hover {
+  border-color: #777;
+  background-color: #333;
+}
+
+.upload-icon {
+  font-size: 36px;
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+#dropZone > div {
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.browse-button {
+  background-color: #00b4d8;
+  color: #fff;
+  border: none;
+  padding: 10px 24px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+  min-height: 38px;
+}
+
+.browse-button:hover {
+  background-color: #0096c7;
+}
+
+#file {
+  display: none;
+}
+
+#progressLine {
+  font-size: 14px;
+  color: #aaa;
+  margin: 0;
+  padding: 8px 0;
+  text-align: center;
+}
+
+#files {
+  margin-top: 5px;
+  line-height: 1.8;
+}
+
+#files > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#files a {
+  margin: 0 8px 0 0;
+  font-size: 14px;
+}
+
+#files br {
+  display: block;
+  content: "";
+  margin: 3px 0;
+}
+
+button {
+  background-color: #d00000;
+  color: #fff;
+  border: none;
+  padding: 4px 12px;
+  font-size: 13px;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: background-color 0.2s ease;
+  min-height: 28px;
+  min-width: 60px;
+}
+
+button:hover {
+  background-color: #9d0208;
+}
+
+button:focus {
+  outline: 2px solid #00b4d8;
+  outline-offset: 2px;
+}
+
+.size-limit {
+  color: #ff6b6b;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.6;
+}

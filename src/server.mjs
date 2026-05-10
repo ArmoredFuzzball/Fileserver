@@ -1,11 +1,12 @@
-import 'dotenv/config';
 import express from 'express';
 import compression from 'compression';
 import fileUpload from 'express-fileupload';
 import { readdirSync, unlinkSync } from 'fs';
 
-const port = process.env.SERVER_PORT;
+process.loadEnvFile();
+
 const path = process.env.SERVER_URL;
+const port = process.env.SERVER_PORT;
 const storagePath = process.env.FILE_STORAGE_PATH;
 
 const app = express();
@@ -16,8 +17,9 @@ app.use(fileUpload({ useTempFiles: true, tempFileDir: '/tmp/' }));
 app.listen(port, () => console.log(`listening on port ${port}`));
 
 app.get(path, (_, res) => res.sendFile('index.html', { root: 'src' }));
-app.get(path + '/client.js', (_, res) => res.sendFile('client.js', { root: 'src' }));
+app.get(path + '/client.js',   (_, res) => res.sendFile('client.js',   { root: 'src' }));
 app.get(path + '/favicon.ico', (_, res) => res.sendFile('favicon.ico', { root: 'src' }));
+app.get(path + '/index.css',   (_, res) => res.sendFile('index.css',   { root: 'src' }));
 
 app.post(path, (req, res) => {
   try {
